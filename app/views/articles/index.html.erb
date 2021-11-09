@@ -1,0 +1,11 @@
+<h1>Lovecraft Articles</h1>
+<ul>
+  <% @articles.each do |article| %>
+    <%= link_to(article_path(article.id), html_options = {}) do %>
+      <li>
+        <h2><%= article.title %></h2>
+        <p><%= article.content %></p>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
